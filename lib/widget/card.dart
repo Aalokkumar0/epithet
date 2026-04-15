@@ -7,8 +7,8 @@ class CardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: 600,
-        width: 300,
+        height: 650,
+        width: 350,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
           gradient: LinearGradient(
@@ -25,9 +25,20 @@ class CardScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text(
+                "Login Your Account",
+                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 25),
+              ),
+
+              SizedBox(height: 30),
+
               TextField(
                 decoration: InputDecoration(
-                  labelText: "Email",
+                  labelText: "Email.....................",
+                  labelStyle: TextStyle(
+                    color: const Color.fromARGB(255, 57, 3, 5),
+                    fontSize: 20,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -38,11 +49,37 @@ class CardScreen extends StatelessWidget {
 
               TextField(
                 decoration: InputDecoration(
-                  labelText:"password",
+                  labelText: "password..............",
+                  labelStyle: TextStyle(
+                    color: const Color.fromARGB(255, 57, 3, 5),
+                    fontSize: 20,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text("Remamber me "), Text("forgot password ?")],
+              ),
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [Colors.blue,Colors.red])
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        // ignore: avoid_print
+                        print("button clicked");
+                      },
+                      child: Text("click me "),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
