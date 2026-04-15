@@ -60,24 +60,52 @@ class CardScreen extends StatelessWidget {
                 ),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text("Remamber me "), Text("forgot password ?")],
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [Text("forgot password ?")],
               ),
+              SizedBox(height: 20),
               Column(
                 children: [
                   Container(
                     height: 50,
-                    width: 300,
+                    width: 250,
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [Colors.blue,Colors.red])
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: LinearGradient(
+                        colors: [
+                          const Color.fromARGB(153, 60, 12, 91),
+                          const Color.fromARGB(181, 72, 6, 4),
+                        ],
+                      ),
                     ),
                     child: TextButton(
                       onPressed: () {
                         // ignore: avoid_print
                         print("button clicked");
                       },
-                      child: Text("click me "),
+                      child: Text(
+                        "Submit ",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     ),
+                  ),
+
+                  SizedBox(height: 20),
+
+                  Text("New User? create Account"),
+
+                  SizedBox(height: 20),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.g_mobiledata_outlined,size: 50,),
+                      SizedBox(width: 40,),
+                      Icon(Icons.apple_outlined,size: 35,),
+                    ],
                   ),
                 ],
               ),
