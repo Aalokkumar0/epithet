@@ -1,7 +1,19 @@
-import 'package:epithet/app_data.dart';
+import 'package:epithet/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(EpithetApp());
+  runApp(EpitherApp());
 }
 
+
+class EpitherApp extends StatelessWidget {
+  const EpitherApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+   return MaterialApp(
+    title: "Epithet",
+    home: HomeScreen(),
+   );
+  }
+}
